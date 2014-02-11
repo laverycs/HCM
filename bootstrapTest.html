@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Bootstrap Testing</title>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
 <!-- FONT AWESOME!!-->
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
@@ -73,6 +73,25 @@ opacity: 1;
 }
 .footer .navbar{float: left;}
 
+/* Subtitles for the different body sections.*/
+.main{
+background-color: green;
+padding-left: 2.5%;
+color: white;
+}
+.side{
+background-color: green;
+padding-left: 2.5%;
+color: white;
+}
+.row{
+font-size: 12px;
+}
+.container{
+margin-left: 0;
+margin-right: 0;
+width: 99%;
+}
 /* Normal css styling */
 h1{
 position: absolute;
@@ -150,7 +169,37 @@ it easier to have visible over the carousel.-->
 </div>
 </div>
 <!-- Main Text and markup -->
-
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6 col-md-8">
+			<h4 class="main">NEWS</h4>
+			<p>Hoochie Coochie Men is a blues-rock and folk band from the small town of Easton, PA. With musical influences that range from The Allman Brothers Band and Robert Johnson to Taj Mahal and Deertick, we have a unique sound that captivates our audience. HCM's two lead vocalists, three piece harmonies, and sound musicianship creates a big sound that is not to be forgotten.</p>	
+		</div>
+		<div class="col-xs-6 col-md-4">
+			<h4 class="side">UPCOMING SHOWS</h4>
+			<div class="row">
+				<div class="col-xs-2">2/22</div>
+				<div class="col-xs-6">EASTON, PA</div>
+				<div class="col-xs-4">FREE</div>			
+			</div>
+			<div class="row">
+				<div class="col-xs-2">2/27</div>
+				<div class="col-xs-6">NYC</div>
+				<div class="col-xs-4">FREE</div>			
+			</div>
+			<div class="row">
+				<div class="col-xs-2">3/25</div>
+				<div class="col-xs-6">NYC</div>
+				<div class="col-xs-4">FREE</div>			
+			</div>
+			<div class="row">
+				<div class="col-xs-2">4/22</div>
+				<div class="col-xs-6">EASTON, PA</div>
+				<div class="col-xs-4">FREE</div>			
+			</div>		
+		</div>
+	</div>
+</div>
 
 <!-- Footer ====================================================================================
 Footer to include facebook, twitter, google+, youtube...etc. -->
@@ -172,7 +221,7 @@ Footer to include facebook, twitter, google+, youtube...etc. -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
-<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>
