@@ -6,6 +6,27 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
 <!-- FONT AWESOME!!-->
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<!-- jPlayer for music -->
+<link type="text/css" href="https://raw2.github.com/laverycs/HCM/master/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
+    <!-- All scripts included at the end to speed up load time. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://raw2.github.com/laverycs/HCM/master/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="https://github.com/laverycs/HCM/tree/master/js/Jplayer.swf"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+          });
+        },
+        swfPath: "/js",
+        supplied: "m4a, oga"
+      });
+    });
+  </script>
 
 </head>
 <style type="text/css">
@@ -73,16 +94,18 @@ opacity: 1;
 }
 .footer .navbar{float: left;}
 
-/* Subtitles for the different body sections.*/
-.main{
+
+.subtitle{
 background-color: green;
-padding-left: 2.5%;
+padding-left: 15px;
 color: white;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 10px;
+border-right: none;
 }
-.side{
-background-color: green;
-padding-left: 2.5%;
-color: white;
+.L{
+border-right: thin solid green;
 }
 .row{
 font-size: 12px;
@@ -91,6 +114,17 @@ font-size: 12px;
 margin-left: 0;
 margin-right: 0;
 width: 99%;
+margin-top: 15px;
+}
+.container p{
+line-height: 150%;
+font-size: 125%;
+}
+.main{
+letter-spacing: 1px;
+}
+.spacer{
+margin-top: 25px;
 }
 /* Normal css styling */
 h1{
@@ -171,33 +205,85 @@ it easier to have visible over the carousel.-->
 <!-- Main Text and markup -->
 <div class="container">
 	<div class="row">
-		<div class="col-xs-6 col-md-8">
-			<h4 class="main">NEWS</h4>
-			<p>Hoochie Coochie Men is a blues-rock and folk band from the small town of Easton, PA. With musical influences that range from The Allman Brothers Band and Robert Johnson to Taj Mahal and Deertick, we have a unique sound that captivates our audience. HCM's two lead vocalists, three piece harmonies, and sound musicianship creates a big sound that is not to be forgotten.</p>	
+		<div class="col-xs-6 col-md-8 L">
+			<h4 class="subtitle">NEWS</h4>
+			<p class="main">Hoochie Coochie Men is a blues-rock and folk band from the small town of Easton, PA. With musical influences that range from The Allman Brothers Band and Robert Johnson to Taj Mahal and Deertick, we have a unique sound that captivates our audience. HCM's two lead vocalists, three piece harmonies, and sound musicianship creates a big sound that is not to be forgotten.</p>	
+			
 		</div>
 		<div class="col-xs-6 col-md-4">
-			<h4 class="side">UPCOMING SHOWS</h4>
-			<div class="row">
+			<h4 class="subtitle">UPCOMING SHOWS</h4>
+			<div class="row spacer">
 				<div class="col-xs-2">2/22</div>
 				<div class="col-xs-6">EASTON, PA</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>
-			<div class="row">
+			<div class="row spacer">
 				<div class="col-xs-2">2/27</div>
 				<div class="col-xs-6">NYC</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>
-			<div class="row">
+			<div class="row spacer">
 				<div class="col-xs-2">3/25</div>
 				<div class="col-xs-6">NYC</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>
-			<div class="row">
+			<div class="row spacer">
 				<div class="col-xs-2">4/22</div>
 				<div class="col-xs-6">EASTON, PA</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>		
 		</div>
+	</div>
+	<div class="row spacer">
+		<div class="col-xs-6 col-md-4 L">
+			<h4 class="subtitle">MUSIC</h4>
+				  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+<!--jPlayer ===============================================================================
+Here is the jPlayer html code for the blue monday music player -->
+  <div id="jp_container_1" class="jp-audio">
+    <div class="jp-type-single">
+      <div class="jp-gui jp-interface">
+        <ul class="jp-controls">
+          <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+          <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+          <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+          <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+        </ul>
+        <div class="jp-progress">
+          <div class="jp-seek-bar">
+            <div class="jp-play-bar"></div>
+          </div>
+        </div>
+        <div class="jp-volume-bar">
+          <div class="jp-volume-bar-value"></div>
+        </div>
+        <div class="jp-time-holder">
+          <div class="jp-current-time"></div>
+          <div class="jp-duration"></div>
+          <ul class="jp-toggles">
+            <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+            <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="jp-title">
+        <ul>
+          <li>Bubble</li>
+        </ul>
+      </div>
+      <div class="jp-no-solution">
+        <span>Update Required</span>
+        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+      </div>
+    </div>
+  </div>
+		</div>
+		<div class="col-xs-6 col-md-8">
+			<h4 class="subtitle">VIDEOS</h4>		
+		</div>	
 	</div>
 </div>
 
@@ -219,9 +305,7 @@ Footer to include facebook, twitter, google+, youtube...etc. -->
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
