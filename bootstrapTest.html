@@ -9,24 +9,9 @@
 <!-- jPlayer for music -->
 <link type="text/css" href="https://raw2.github.com/laverycs/HCM/master/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
     <!-- All scripts included at the end to speed up load time. -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
 <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://raw2.github.com/laverycs/HCM/master/js/jquery.jplayer.min.js"></script>
-<script type="text/javascript" src="https://github.com/laverycs/HCM/tree/master/js/Jplayer.swf"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-      $("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-          });
-        },
-        swfPath: "/js",
-        supplied: "m4a, oga"
-      });
-    });
-  </script>
+
 
 </head>
 <style type="text/css">
@@ -80,7 +65,7 @@ width: 15px;
 
 /* Navbar for the footer and Social Media*/
 .footer{
-position: absolute;
+position: fixed;
 bottom: 0;
 background-color: darkgreen;
 width: 100%;
@@ -237,52 +222,12 @@ it easier to have visible over the carousel.-->
 	<div class="row spacer">
 		<div class="col-xs-6 col-md-4 L">
 			<h4 class="subtitle">MUSIC</h4>
-				  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-
-<!--jPlayer ===============================================================================
-Here is the jPlayer html code for the blue monday music player -->
-  <div id="jp_container_1" class="jp-audio">
-    <div class="jp-type-single">
-      <div class="jp-gui jp-interface">
-        <ul class="jp-controls">
-          <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-          <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-          <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-          <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-        </ul>
-        <div class="jp-progress">
-          <div class="jp-seek-bar">
-            <div class="jp-play-bar"></div>
-          </div>
-        </div>
-        <div class="jp-volume-bar">
-          <div class="jp-volume-bar-value"></div>
-        </div>
-        <div class="jp-time-holder">
-          <div class="jp-current-time"></div>
-          <div class="jp-duration"></div>
-          <ul class="jp-toggles">
-            <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
-            <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="jp-title">
-        <ul>
-          <li>Bubble</li>
-        </ul>
-      </div>
-      <div class="jp-no-solution">
-        <span>Update Required</span>
-        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-      </div>
-    </div>
-  </div>
+			<!-- Reverbnation Player -->
+				  <div class="widget_iframe" style="display:inline-block;width:320px;height:320px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_3960356?widget_id=50&amp;posted_by=artist_3960356&pwc[design]=default&pwc[background_color]=%23333333&pwc[included_songs]=1&pwc[photo]=0%2C1&pwc[size]=custom" width="100%" height="100%" frameborder="0" scrolling="no"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"><center><a href="http://www.reverbnation.com/band-promotion/epk-electronic-press-kits?utm_campaign=a_features_rpk&utm_medium=widget&utm_source=HTML5_Player&utm_content=widgetfooter_Free Electronic Press Kits from ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Free Electronic Press Kits from ReverbNation.com</a></center></div></div>
 		</div>
 		<div class="col-xs-6 col-md-8">
-			<h4 class="subtitle">VIDEOS</h4>		
+			<h4 class="subtitle">VIDEOS</h4>
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/ArfpPxd6fyo?rel=0" frameborder="0" allowfullscreen></iframe>
 		</div>	
 	</div>
 </div>
