@@ -15,6 +15,12 @@
 
 </head>
 <style type="text/css">
+.background{
+margin-left: 1%;
+margin-right: 1%;
+background-color: #999966;
+}
+
 /*Adjustments to normal bootstrap.css styling */
 /* Navbar Edits */
 .navbar{
@@ -28,19 +34,19 @@ float:none;
 }
 .nav li a{
 padding: 5px 10px;
-color: #999966;
+color: #293D66;
 }
 .nav li.top a:hover{
 background-color: transparent;
 text-decoration: none;
-border-bottom: 1px solid #3366CC;
+border-bottom: 1px solid #293D66;
 padding-bottom: 3px;
 }
 .nav li.top.title a:hover{
 border-bottom: none;
 }
 .nav li.top.active a{
-color: #3366CC;
+color: #293D66;
 }
 .nav li{
 display:inline-block;
@@ -50,7 +56,7 @@ padding-bottom: 0;
 }
 .topLine{
 margin-bottom: 0;
-margin-top: 10px;
+margin-top: 0;
 }
 .bottomLine{
 margin-bottom: 10px;
@@ -79,16 +85,16 @@ background-color: white;
 opacity: 0.3;
 }
 .carousel-indicators .active{
-background-color: #3366CC;
+background-color: #293D66;
 opacity: 1;
 border: none;
 height: 15px;
 width: 15px;
 }
 .subtitle{
-background-color: #999966;
+background-color: #293D66;
 padding-left: 15px;
-color: #3366CC;
+color: #fff;
 padding-top: 5px;
 padding-bottom: 5px;
 padding-right: 10px;
@@ -112,9 +118,6 @@ font-size: 125%;
 }
 .main{
 letter-spacing: 1px;
-}
-.spacer{
-margin-top: 25px;
 }
 .spacer1{
 margin-top: 5px;
@@ -161,7 +164,7 @@ height:315px;
 }
 
 .carousel-control{
-color: #3366CC;
+color: #293D66;
 }
 .carousel-control.right{
 top: 150px;
@@ -171,7 +174,7 @@ top: 150px;
 }
 .carousel-control:hover,
 .carousel-control:focus{
-color:#3366CC;
+color:#293D66;
 
 }
 </style>
@@ -185,7 +188,7 @@ width: 100%;
 }
 .navbar-fixed-bottom{
 width: 100%;
-background-color: #999966;
+background-color: #293D66;
 }
 .navbar-fixed-bottom div.navbar-inner{
 float: left;
@@ -193,7 +196,7 @@ padding-left: 2.5%;
 
 }
 .footer h2 a{
-color: #3366CC;
+color: #999966;
 opacity: .5;
 }
 h2 a:hover{
@@ -205,8 +208,9 @@ float: left;
 }
 </style>
 <body>
+<div class="background">
 <!-- Navbar at the top of the page ========================================================= -->
-<hr style="height:3px;border-width:0;background-color:#3366CC; width:100%" class="topLine" />
+<hr style="height:3px;border-width:0;background-color:#293D66; width:100%" class="topLine" />
 <div class="container">
 <div class="collapse navbar-collapse">
 <div class="navbar navbar-static-top">
@@ -225,7 +229,7 @@ float: left;
 </div>
 </div>
 </div>
-<hr style="height:3px;border-width:0;background-color:#3366CC; width:100%" class="bottomLine" />
+<hr style="height:3px;border-width:0;background-color:#293D66; width:100%" class="bottomLine" />
 <!-- Carousel Header =======================================================================
 No next slide buttons, carousel moves every 5 seconds, indicators are squares and change to a
 different color-->
@@ -381,6 +385,6 @@ Footer to include facebook, twitter, google+, youtube...etc. -->
 
 
 
-
+</div>
 </body>
 </html>
