@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Bootstrap Testing</title>
+<title>Hoochi Coochie Men</title>
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
 <!-- FONT AWESOME!!-->
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -20,31 +20,51 @@
 .navbar{position:relative;}
 .navbar-inner{
 display: inline-block;
-float:right;
+float:none;
 }
 .nav li a{
 padding: 5px 10px;
 color: green;
 }
-.nav li a:hover{
+.nav li.top a:hover{
 background-color: transparent;
 text-decoration: none;
 border-bottom: 3px solid darkgreen;
 padding-bottom: 5px;
 }
+.nav li.top.title a:hover{
+border-bottom: none;
+}
+.nav li.top.active a{
+color: #F78156;
+}
 .nav li{
 display:inline-block;
 }
-
+.navbar-static-top{
+padding-bottom: 0;
+}
+.topLine{
+margin-bottom: 0;
+margin-top: 10px;
+}
+.bottomLine{
+margin-bottom: 10px;
+margin-top: 0;
+}
+.title{
+font-weight: bolder;
+font-style: oblique;
+}
 /* Carousel edits */
-#carouselTest{height: 200px}
+#carouselHeader{height: 200px}
 .carousel .carousel-fade .item {opacity:0;}
 .carousel .carousel-fade .active.item{opacity: 1;}
 .carousel-inner{
 z-index: -1;
 position: absolute;
 }
-.item{height: 200px; width: 100%;}
+.photoCarousel .item{height: 200px; width: 100%;}
 .carousel-indicators{
 text-align: left;
 border: none;
@@ -62,24 +82,6 @@ border: none;
 height: 15px;
 width: 15px;
 }
-
-/* Navbar for the footer and Social Media*/
-.footer{
-position: fixed;
-bottom: 0;
-background-color: darkgreen;
-width: 100%;
-}
-.footer h2 a{
-color: white;
-opacity: .5;
-}
-h2 a:hover{
-opacity: 1;
-}
-.footer .navbar{float: left;}
-
-
 .subtitle{
 background-color: green;
 padding-left: 15px;
@@ -89,16 +91,16 @@ padding-bottom: 5px;
 padding-right: 10px;
 border-right: none;
 }
-.L{
+/*.L{
 border-right: thin solid green;
-}
+}*/
 .row{
 font-size: 12px;
 }
-.container{
+.container.content{
 margin-left: 0;
 margin-right: 0;
-width: 99%;
+width: 100%;
 margin-top: 15px;
 }
 .container p{
@@ -111,35 +113,128 @@ letter-spacing: 1px;
 .spacer{
 margin-top: 25px;
 }
-/* Normal css styling */
-h1{
-position: absolute;
-left: 8%;
+.spacer1{
 margin-top: 5px;
-line-height: 25px;
+}
+h1{
 font-size: 24px;
-z-index: 10;
-color: darkgreen;
 }
 
 </style>
+<!-- Reverbnation Player Style=================================================-->
+<style type="text/css">
+.widget_iframe{
+display:inline-block;
+width:320px;
+height:320px;
+margin:0;
+padding:0;
+border:0;
+}
+iframe .widget_iframe{
+width=100%;
+height=100%;
+frameborder=0;
+scrolling=no;
+}
+.footer_branding{
+margin-top:-5px;
+font-size:10px;
+font-family:Arial;
+}
+</style>
+<!-- Youtube Carousel Style====================================================-->
+<style type="text/css">
+.carouselVideo{
+height: 400px;
+}
+.carouselVideo .item{
+height: 400px;
+width:450px;
+}
+iframe .youtube {
+width:420px;
+height:315px;
+}
 
+.carousel-control{
+color: darkgreen;
+}
+.carousel-control.right{
+top: 150px;
+}
+.carousel-control.left{
+top: 150px;
+}
+.carousel-control:hover,
+.carousel-control:focus{
+color:darkgreen;
+
+}
+</style>
+<!-- Navbar for the footer and Social Media -->
+<style type="text/css">
+.footer{
+position: inherit;
+bottom: 0;
+
+width: 100%;
+}
+.navbar-fixed-bottom{
+width: 100%;
+background-color: darkgreen;
+}
+.navbar-fixed-bottom div.navbar-inner{
+float: left;
+padding-left: 2.5%;
+
+}
+.footer h2 a{
+color: #fff;
+opacity: .5;
+}
+h2 a:hover{
+opacity: 1;
+border-bottom:none;
+}
+.footer .navbar{
+float: left;
+}
+</style>
 <body>
-<!-- Carousel Attempt 1 =======================================================================
-No next slide buttons, carousel moves every 3 seconds not 5, indicators are squares and change to a
+<!-- Navbar at the top of the page ========================================================= -->
+<hr style="height:3px;border-width:0;background-color:green" class="topLine" />
+<div class="container">
+<div class="navbar navbar-static-top">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li class="top active title"><a href="#"><h1>HOOCHIE COOCHIE MEN</h1></a></li>
+			<li class="top"><a href="#news" class="menu">NEWS</a></li>
+			<li class="top"><a href="#shows" class="menu">SHOWS</a></li>
+			<li class="top"><a href="#music" class="menu">MUSIC</a></li>
+			<li class="top"><a href="#videos" class="menu">VIDEOS</a></li>
+			<li class="top"><a href="#store" class="menu">STORE</a></li>
+			<li class="top"><a href="#artwork" class="menu">ARTWORK</a></li>
+			<li class="top"><a href="#about" class="menu">ABOUT</a></li>
+		</ul>
+	</div>
+</div>
+</div>
+<hr style="height:3px;border-width:0;background-color:green" class="bottomLine" />
+<!-- Carousel Header =======================================================================
+No next slide buttons, carousel moves every 5 seconds, indicators are squares and change to a
 different color-->
-<div id="carouselTest" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
-	<h1>HOOCHIE</h1>  
-  
+<div id="carouselHeader" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+ 
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carouselTest" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselTest" data-slide-to="1"></li>
-    <li data-target="#carouselTest" data-slide-to="2"></li>
+    <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselHeader" data-slide-to="1"></li>
+    <li data-target="#carouselHeader" data-slide-to="2"></li>
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="container1">
+  <div class="photoCarousel">
   <div class="carousel-inner">
     <div class="item active">
       <img src="https://raw2.github.com/laverycs/HCM/master/Images/IMG_2077.JPG" alt="" />
@@ -156,39 +251,41 @@ different color-->
   </div>
   </div>
   <!-- Controls 
-  <a class="left carousel-control" href="#carouselTest" data-slide="prev">
+  <a class="left carousel-control" href="#carouselHeader" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
-  <a class="right carousel-control" href="#carouselTest" data-slide="next">
+  <a class="right carousel-control" href="#carouselHeader" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
+</div> -->
 </div>
-
 
 <!-- NAVBAR ===================================================================================
 Navbar that is floating on the right side of the screen, fixed at the top, and has my own styling
 elements such as no background color, my own font...etc. It sits with the carousel tags to make 
 it easier to have visible over the carousel.-->
-
+<!--
 <div class="navbar navbar-static-top">
 	<div class="navbar-inner">
 		<ul class="nav">
-			<li class="active"><a href="#">HOME</a></li>
-			<li><a href="#news">NEWS</a></li>
-			<li><a href="#shows">SHOWS</a></li>
-			<li><a href="#music">MUSIC</a></li>
-			<li><a href="#videos">VIDEOS</a></li>
-			<li><a href="#store">STORE</a></li>
-			<li><a href="#artwork">ARTWORK</a></li>
-			<li><a href="#about">ABOUT</a></li>	
+			<li class="top active"><a href="#">HOME</a></li>
+			<li class="top"><a href="#news">NEWS</a></li>
+			<li class="top"><a href="#shows">SHOWS</a></li>
+			<li class="top"><a href="#music">MUSIC</a></li>
+			<li class="top"><a href="#videos">VIDEOS</a></li>
+			<li class="top"><a href="#store">STORE</a></li>
+			<li class="top"><a href="#artwork">ARTWORK</a></li>
+			<li class="top"><a href="#about">ABOUT</a></li>	
 		</ul>
 	</div>
 </div>
 <div class="extra">
 </div>
 </div>
+-->
+
 <!-- Main Text and markup -->
-<div class="container">
+<div class="container content">
 	<div class="row">
 		<div class="col-xs-6 col-md-8 L">
 			<h4 class="subtitle">NEWS</h4>
@@ -197,22 +294,22 @@ it easier to have visible over the carousel.-->
 		</div>
 		<div class="col-xs-6 col-md-4">
 			<h4 class="subtitle">UPCOMING SHOWS</h4>
-			<div class="row spacer">
+			<div class="row spacer1">
 				<div class="col-xs-2">2/22</div>
 				<div class="col-xs-6">EASTON, PA</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>
-			<div class="row spacer">
+			<div class="row spacer1">
 				<div class="col-xs-2">2/27</div>
-				<div class="col-xs-6">NYC</div>
+				<div class="col-xs-6">MANHATTAN, NYC</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>
-			<div class="row spacer">
+			<div class="row spacer1">
 				<div class="col-xs-2">3/25</div>
-				<div class="col-xs-6">NYC</div>
+				<div class="col-xs-6">MANHATTAN, NYC</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>
-			<div class="row spacer">
+			<div class="row spacer1">
 				<div class="col-xs-2">4/22</div>
 				<div class="col-xs-6">EASTON, PA</div>
 				<div class="col-xs-4">FREE</div>			
@@ -223,18 +320,50 @@ it easier to have visible over the carousel.-->
 		<div class="col-xs-6 col-md-4 L">
 			<h4 class="subtitle">MUSIC</h4>
 			<!-- Reverbnation Player -->
-				  <div class="widget_iframe" style="display:inline-block;width:320px;height:320px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_3960356?widget_id=50&amp;posted_by=artist_3960356&pwc[design]=default&pwc[background_color]=%23333333&pwc[included_songs]=1&pwc[photo]=0%2C1&pwc[size]=custom" width="100%" height="100%" frameborder="0" scrolling="no"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"><center><a href="http://www.reverbnation.com/band-promotion/epk-electronic-press-kits?utm_campaign=a_features_rpk&utm_medium=widget&utm_source=HTML5_Player&utm_content=widgetfooter_Free Electronic Press Kits from ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Free Electronic Press Kits from ReverbNation.com</a></center></div></div>
+				  <div class="widget_iframe">
+				  		<iframe class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_3960356?widget_id=50&amp;posted_by=artist_3960356&pwc[design]=default&pwc[background_color]=%23333333&pwc[included_songs]=1&pwc[photo]=0%2C1&pwc[size]=custom"></iframe>
+				  		<div class="footer_branding">
+				  			<center><a href="http://www.reverbnation.com/band-promotion/epk-electronic-press-kits?utm_campaign=a_features_rpk&utm_medium=widget&utm_source=HTML5_Player&utm_content=widgetfooter_Free Electronic Press Kits from ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Free Electronic Press Kits from ReverbNation.com</a></center>
+				  		</div>
+				  	</div>
 		</div>
 		<div class="col-xs-6 col-md-8">
 			<h4 class="subtitle">VIDEOS</h4>
-			<iframe width="420" height="315" src="https://www.youtube.com/embed/ArfpPxd6fyo?rel=0" frameborder="0" allowfullscreen></iframe>
-		</div>	
+			
+<!-- Video Carousel=======================================================================
+No Automatic sliding between videos-->
+<div id="carouselVideo" class="carousel slide" data-ride="carousel" data-interval="false"> 
+
+  <!-- Wrapper for slides -->
+  <div class="container1">
+  <div class="carousel-inner">
+    <div class="item active">
+      <center><iframe width="420" height="315" src="https://www.youtube.com/embed/ArfpPxd6fyo?rel=0" frameborder="0" allowfullscreen></iframe></center>
+    </div>
+    <div class="item">
+    	<center><iframe width="420" height="315" src="https://www.youtube.com/embed/WFJHeLB_QBo?rel=0" frameborder="0" allowfullscreen></iframe></center>
+    </div>
+    <div class="item">
+    	<center><iframe width="420" height="315" src="https://www.youtube.com/embed/ZKwfhO5gatQ?rel=0" frameborder="0" allowfullscreen></iframe></center>
+    </div>
+  </div>
+  </div>
+	<!-- Left and Right Controls -->
+  <a class="left carousel-control" href="#carouselVideo" data-slide="prev">
+    <span class="fa fa-arrow-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carouselVideo" data-slide="next">
+    <span class="fa fa-arrow-right"></span>
+  </a>
+</div>
+
+		</div>
 	</div>
 </div>
 
 <!-- Footer ====================================================================================
 Footer to include facebook, twitter, google+, youtube...etc. -->
-<div class="footer">
+<div class="footer spacer">
 <div class="navbar navbar-fixed-bottom">
 	<div class="navbar-inner">
 		<ul class="nav">
@@ -245,7 +374,6 @@ Footer to include facebook, twitter, google+, youtube...etc. -->
 		</ul>
 	</div>
 </div>
-<div class="extra">
 </div>
 
 
