@@ -15,14 +15,94 @@
 
 </head>
 <style type="text/css">
+body{
+background-color: #4A5C80;
+}
+/* old background color: #999966*/
+/*Adjustments to normal bootstrap.css styling */
 .background{
-margin-left: 1%;
-margin-right: 1%;
-background-color: #999966;
+margin-left: 3%;
+margin-right: 3%;
+background-color: #C7C7B7;
+}
+.subtitle{
+background-color: #4A5C80;
+padding-left: 15px;
+color: #fff;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 10px;
+border-right: none;
+}
+.row .spacer1 .subtitle{
+margin-left: 15px;
+margin-right: 15px;
+}
+.row{
+font-size: 12px;
+}
+.space{
+padding-right: 25px;
+padding-left: 25px;
+}
+.textLink{
+color: #BD0202;
+}
+p a:hover{
+text-decoration: none;
+color: #BD0202;
+}
+.shows{
+border-bottom: thin solid #606878;
+margin-right: 5px;
+margin-left: 5px;
+margin-top: 5px;
+}
+.container.content{
+margin-left: 0;
+margin-right: 0;
+width: 100%;
+margin-top: 15px;
+}
+h5{
+font-style: italic;
+font-size:20px; 
+}
+.container p{
+line-height: 150%;
+font-size: 125%;
+}
+.separate{
+margin-top: 0;
+margin-bottom: 0;
+}
+.update{
+padding-bottom: 15px;
+}
+.update img{
+width: 100%;
+padding-bottom: 10px;
+padding-top: 5px;
+}
+.update div{
+text-align: center;
+}
+.main{
+border-bottom: thin solid #606878;
+margin-bottom: 25px;
 }
 
-/*Adjustments to normal bootstrap.css styling */
-/* Navbar Edits */
+.spacer1{
+margin-top: 5px;
+}
+h1{
+font-size: 24px;
+
+}
+</style>
+
+<!-- Navbar Edits =====================-->
+<style type="text/css">
 .navbar{
 position:relative;
 margin-bottom: 0px;
@@ -34,19 +114,19 @@ float:none;
 }
 .nav li a{
 padding: 5px 10px;
-color: #293D66;
+color: #4A5C80;
 }
 .nav li.top a:hover{
 background-color: transparent;
 text-decoration: none;
-border-bottom: 1px solid #293D66;
+border-bottom: 1px solid #4A5C80;
 padding-bottom: 3px;
 }
 .nav li.top.title a:hover{
 border-bottom: none;
 }
 .nav li.top.active a{
-color: #293D66;
+color: #BD0202;
 }
 .nav li{
 display:inline-block;
@@ -66,14 +146,19 @@ margin-top: 0;
 font-weight: bolder;
 font-style: oblique;
 }
+</style>
+<style type="text/css">
+
 /* Carousel edits */
-#carouselHeader{height: 400px}
+#carouselHeader{
+height: 400px;
+}
 .carousel .carousel-fade .item {opacity:0;}
 .carousel .carousel-fade .active.item{opacity: 1;}
 .carousel-inner{
 position: absolute;
 }
-.photoCarousel .item{height: 400px; width: 100%;}
+.photoCarousel .item{width: 100%;}
 .carousel-indicators{
 text-align: left;
 border: none;
@@ -85,14 +170,14 @@ background-color: white;
 opacity: 0.3;
 }
 .carousel-indicators .active{
-background-color: #293D66;
+background-color: #4A5C80;
 opacity: 1;
 border: none;
 height: 15px;
 width: 15px;
 }
 .subtitle{
-background-color: #293D66;
+background-color: #4A5C80;
 padding-left: 15px;
 color: #fff;
 padding-top: 5px;
@@ -100,11 +185,23 @@ padding-bottom: 5px;
 padding-right: 10px;
 border-right: none;
 }
-/*.L{
-border-right: thin solid green;
-}*/
+.row .spacer1 .subtitle{
+margin-left: 15px;
+margin-right: 15px;
+}
 .row{
 font-size: 12px;
+}
+.space{
+padding-right: 25px;
+padding-left: 25px;
+}
+
+.shows{
+border-bottom: thin solid #606878;
+margin-right: 5px;
+margin-left: 5px;
+margin-top: 5px;
 }
 .container.content{
 margin-left: 0;
@@ -112,18 +209,40 @@ margin-right: 0;
 width: 100%;
 margin-top: 15px;
 }
+h5{
+font-style: italic;
+font-size:20px; 
+}
 .container p{
 line-height: 150%;
 font-size: 125%;
 }
-.main{
-letter-spacing: 1px;
+.separate{
+margin-top: 0;
+margin-bottom: 0;
 }
+.update{
+padding-bottom: 15px;
+}
+.update img{
+width: 100%;
+padding-bottom: 10px;
+padding-top: 5px;
+}
+.update div{
+text-align: center;
+}
+.main{
+border-bottom: thin solid #606878;
+margin-bottom: 25px;
+}
+
 .spacer1{
 margin-top: 5px;
 }
 h1{
 font-size: 24px;
+
 }
 
 </style>
@@ -131,52 +250,22 @@ font-size: 24px;
 <style type="text/css">
 .widget_iframe{
 display:inline-block;
-width:320px;
+width:100%;
 height:320px;
 margin:0;
 padding:0;
 border:0;
 }
-iframe .widget_iframe{
-width=100%;
-height=100%;
-frameborder=0;
-scrolling=no;
-}
+
 .footer_branding{
 margin-top:-5px;
 font-size:10px;
 font-family:Arial;
+padding-bottom: 5px;
+border-bottom: thin solid #606878;
+
 }
 </style>
-<!-- Youtube Carousel Style====================================================-->
-<style type="text/css">
-.carouselVideo{
-height: 400px;
-}
-.carouselVideo .item{
-height: 400px;
-width:450px;
-}
-iframe .youtube {
-width:420px;
-height:315px;
-}
-
-.carousel-control{
-color: #293D66;
-}
-.carousel-control.right{
-top: 150px;
-}
-.carousel-control.left{
-top: 150px;
-}
-.carousel-control:hover,
-.carousel-control:focus{
-color:#293D66;
-
-}
 </style>
 <!-- Navbar for the footer and Social Media -->
 <style type="text/css">
@@ -188,7 +277,7 @@ width: 100%;
 }
 .navbar-fixed-bottom{
 width: 100%;
-background-color: #293D66;
+background-color: #4A5C80;
 }
 .navbar-fixed-bottom div.navbar-inner{
 float: left;
@@ -196,7 +285,7 @@ padding-left: 2.5%;
 
 }
 .footer h2 a{
-color: #999966;
+color: #C7C7B7;
 opacity: .5;
 }
 h2 a:hover{
@@ -208,32 +297,32 @@ float: left;
 }
 </style>
 <body>
+<div class="containAll">
 <div class="background">
 <!-- Navbar at the top of the page ========================================================= -->
-<hr style="height:3px;border-width:0;background-color:#293D66; width:100%" class="topLine" />
+<hr style="height:3px;border-width:0;background-color:#4A5C80; width:100%" class="topLine" />
 <div class="container">
 <div class="collapse navbar-collapse">
 <div class="navbar navbar-static-top">
 	<div class="navbar-inner">
 		<ul class="nav">
 			<li class="top active title"><a href="#">HOOCHIE COOCHIE MEN</a></li>
-			<li class="top"><a href="#news" class="menu">NEWS</a></li>
 			<li class="top"><a href="#shows" class="menu">SHOWS</a></li>
 			<li class="top"><a href="#music" class="menu">MUSIC</a></li>
 			<li class="top"><a href="#videos" class="menu">VIDEOS</a></li>
-			<li class="top"><a href="#store" class="menu">STORE</a></li>
-			<li class="top"><a href="#artwork" class="menu">ARTWORK</a></li>
+			<li class="top"><a href="#photos" class="menu">STORE</a></li>
 			<li class="top"><a href="#about" class="menu">ABOUT</a></li>
 		</ul>
 	</div>
 </div>
 </div>
 </div>
-<hr style="height:3px;border-width:0;background-color:#293D66; width:100%" class="bottomLine" />
+<hr style="height:3px;border-width:0;background-color:#4A5C80; width:100%" class="bottomLine" />
 <!-- Carousel Header =======================================================================
 No next slide buttons, carousel moves every 5 seconds, indicators are squares and change to a
 different color-->
-<div id="carouselHeader" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+
+<div id="carouselHeader" class="carousel slide" data-ride="carousel" data-interval="5000">
  
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -256,115 +345,63 @@ different color-->
     </div>-->
   </div>
   </div>
-  <!-- Controls 
-  <a class="left carousel-control" href="#carouselHeader" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carouselHeader" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div> -->
 </div>
 
-<!-- NAVBAR ===================================================================================
-Navbar that is floating on the right side of the screen, fixed at the top, and has my own styling
-elements such as no background color, my own font...etc. It sits with the carousel tags to make 
-it easier to have visible over the carousel.-->
-<!--
-<div class="navbar navbar-static-top">
-	<div class="navbar-inner">
-		<ul class="nav">
-			<li class="top active"><a href="#">HOME</a></li>
-			<li class="top"><a href="#news">NEWS</a></li>
-			<li class="top"><a href="#shows">SHOWS</a></li>
-			<li class="top"><a href="#music">MUSIC</a></li>
-			<li class="top"><a href="#videos">VIDEOS</a></li>
-			<li class="top"><a href="#store">STORE</a></li>
-			<li class="top"><a href="#artwork">ARTWORK</a></li>
-			<li class="top"><a href="#about">ABOUT</a></li>	
-		</ul>
-	</div>
-</div>
-<div class="extra">
-</div>
-</div>
--->
 
 <!-- Main Text and markup -->
 <div class="container content">
 	<div class="row">
-		<div class="col-xs-6 col-md-8 L">
+		<div class="col-md-8 space">
 			<h4 class="subtitle">NEWS</h4>
-			<p class="main">Hoochie Coochie Men is a blues-rock and folk band from the small town of Easton, PA. With musical influences that range from The Allman Brothers Band and Robert Johnson to Taj Mahal and Deertick, we have a unique sound that captivates our audience. HCM's two lead vocalists, three piece harmonies, and sound musicianship creates a big sound that is not to be forgotten.</p>	
-			
-		</div>
-		<div class="col-xs-6 col-md-4">
-			<h4 class="subtitle">UPCOMING SHOWS</h4>
-			<div class="row spacer1">
-				<div class="col-xs-2">2/22</div>
-				<div class="col-xs-6">EASTON, PA</div>
-				<div class="col-xs-4">FREE</div>			
+			<div class="update">
+			<h5>Show Tonight!! 2/27</h5>
+			<hr style="height:2px;border-width:1px;border-color: #4A5C80; width:100%" class= "separate"/>
+			<hr style="height:2px;border-width:1px;border-color: #4A5C80; width:100%"class="separate"/>
+			<div><img src="https://raw.github.com/laverycs/HCM/master/Images/babyBird.JPG" alt="" /></div>
+			<p >All you New York Hoochie Coochie fans....we have a very special show tonight at <a href="https://www.facebook.com/pages/FAT-BABY-NYC/365713102002" class="textLink">FAT BABY NYC</a>! We'll be sharing the stage with our very good friends <a href="https://www.facebook.com/echobloomrocks" class="textLink">Echo Bloom</a>, <a href="https://www.facebook.com/CrookedTailsmusic" class="textLink">Crooked Tails</a>, and The Green Gallows!</p>	
+			<p class="main">Show starts at 8 with Crooked Tails, 9 Green Gallows, HCM at 10, and Echo Bloom at 11.....and it's <a href="https://www.facebook.com/events/1457076407849241/" class="textLink">free</a>!</p>
+			<h4 class="subtitle"></h4>
 			</div>
-			<div class="row spacer1">
+			<div class="update">
+			<h5>Great show at Lafayette!!</h5>
+			<hr style="height:2px;border-width:1px;border-color: #4A5C80; width:100%" class= "separate"/>
+			<hr style="height:2px;border-width:1px;border-color: #4A5C80; width:100%"class="separate"/>
+			<div><img src="https://raw.github.com/laverycs/HCM/master/Images/homePage2.JPG" alt="" /></div>
+			<p >Awesome time playing with our good friends <a href="https://www.facebook.com/echobloomrocks" class="textLink">Echo Bloom</a> this past Saturday! If you missed it, we'll be playing together again along with <a href="https://www.facebook.com/CrookedTailsmusic" class="textLink">Crooked Tails</a>, and The Green Gallows this Thursday in NYC at <a href="https://www.facebook.com/pages/FAT-BABY-NYC/365713102002" class="textLink">FAT BABY NYC</a>!!</p>	
+			<p class="main">Check it out <a href="https://www.facebook.com/events/1457076407849241/" class="textLink">here</a>!</p>
+			<h4 class="subtitle"></h4>
+			</div>
+		</div>
+
+	<!-- Right Column =======================================================================================-->	
+		<div class="col-md-4 space">
+			<h4 class="subtitle">MUSIC</h4>
+			<!-- Reverbnation Player -->
+				  <div class="widget_iframe" >
+				  <iframe class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_2882978?widget_id=50&amp;posted_by=artist_2882978&pwc[design]=customized&pwc[background_color]=%234A5C80&pwc[included_songs]=1&pwc[photo]=0%2C1&pwc[size]=fit" width="100%" height="100%" qstyle="padding-right: 30px;" frameborder="0" scrolling="no"></iframe>
+				  		<div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;">
+				  			<center><a href="http://www.reverbnation.com/band-promotion/epk-electronic-press-kits?utm_campaign=a_features_rpk&utm_medium=widget&utm_source=HTML5_Player&utm_content=widgetfooter_Free Electronic Press Kits from ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Free Electronic Press Kits from ReverbNation.com</a></center>
+				  		</div>
+				  </div>
+			<h4 class="subtitle">UPCOMING SHOWS</h4>
+			<div class="row shows">
 				<div class="col-xs-2">2/27</div>
 				<div class="col-xs-6">MANHATTAN, NYC</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>
-			<div class="row spacer1">
+			<div class="row shows">
 				<div class="col-xs-2">3/25</div>
 				<div class="col-xs-6">MANHATTAN, NYC</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>
-			<div class="row spacer1">
+			<div class="row shows">
 				<div class="col-xs-2">4/22</div>
 				<div class="col-xs-6">EASTON, PA</div>
 				<div class="col-xs-4">FREE</div>			
 			</div>		
 		</div>
 	</div>
-	<div class="row spacer">
-		<div class="col-xs-6 col-md-4 L">
-			<h4 class="subtitle">MUSIC</h4>
-			<!-- Reverbnation Player -->
-				  <div class="widget_iframe">
-				  		<iframe class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_3960356?widget_id=50&amp;posted_by=artist_3960356&pwc[design]=default&pwc[background_color]=%23333333&pwc[included_songs]=1&pwc[photo]=0%2C1&pwc[size]=custom"></iframe>
-				  		<div class="footer_branding">
-				  			<center><a href="http://www.reverbnation.com/band-promotion/epk-electronic-press-kits?utm_campaign=a_features_rpk&utm_medium=widget&utm_source=HTML5_Player&utm_content=widgetfooter_Free Electronic Press Kits from ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Free Electronic Press Kits from ReverbNation.com</a></center>
-				  		</div>
-				  	</div>
-		</div>
-		<div class="col-xs-6 col-md-8">
-			<h4 class="subtitle">VIDEOS</h4>
-			
-<!-- Video Carousel=======================================================================
-No Automatic sliding between videos-->
-<div id="carouselVideo" class="carousel slide" data-ride="carousel" data-interval="false"> 
 
-  <!-- Wrapper for slides -->
-  <div class="container1">
-  <div class="carousel-inner">
-    <div class="item active">
-      <center><iframe width="420" height="315" src="https://www.youtube.com/embed/ArfpPxd6fyo?rel=0" frameborder="0" allowfullscreen></iframe></center>
-    </div>
-    <div class="item">
-    	<center><iframe width="420" height="315" src="https://www.youtube.com/embed/WFJHeLB_QBo?rel=0" frameborder="0" allowfullscreen></iframe></center>
-    </div>
-    <div class="item">
-    	<center><iframe width="420" height="315" src="https://www.youtube.com/embed/ZKwfhO5gatQ?rel=0" frameborder="0" allowfullscreen></iframe></center>
-    </div>
-  </div>
-  </div>
-	<!-- Left and Right Controls -->
-  <a class="left carousel-control" href="#carouselVideo" data-slide="prev">
-    <span class="fa fa-arrow-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carouselVideo" data-slide="next">
-    <span class="fa fa-arrow-right"></span>
-  </a>
-</div>
-
-		</div>
-	</div>
 </div>
 
 <!-- Footer ====================================================================================
@@ -373,15 +410,15 @@ Footer to include facebook, twitter, google+, youtube...etc. -->
 <div class="navbar navbar-fixed-bottom">
 	<div class="navbar-inner">
 		<ul class="nav">
-			<li><h2 class="social"><a href="#"><i class="fa fa-facebook-square"></i></a></h2></li>
+			<li><h2><a href="https://www.facebook.com/HoochieCoochieMen"><i class="fa fa-facebook-square"></i></a></h2></li>
 			<li><h2><a href=""><i class="fa fa-twitter-square"></i></a></h2></li>
 			<li><h2><a href=""><i class="fa fa-google-plus-square"></i></a></h2></li>
-			<li><h2><a href=""><i class="fa fa-youtube"></i></a></h2></li>
+			<li><h2><a href="http://www.youtube.com/channel/UCuN7DhGsZ92vePmR7gnxK6Q"><i class="fa fa-youtube"></i></a></h2></li>
 		</ul>
 	</div>
 </div>
 </div>
-
+</div>
 
 
 
